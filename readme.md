@@ -1,19 +1,29 @@
-#Supported Endpoints
+# Supported Endpoints
 
 ### Week
+
 The following endpoints all support both GET and PUT requests.  Any JSON body recieved from a GET request is a valid body 
 to transmit in a PUT request.
 
-```week/current/{user}```
+```
+week/current/{user} 
+```
+
 Gets the current week, based on PST.
 
-```week/previous/{user}```
+```
+week/previous/{user}
+```
 Gets the previous week, based on PST.
 
-```week/{date}/{user}```
+```
+week/{date}/{user}
+```
 Gets a specific week by date, e.g. week/2015-9-1/stefango
 
-```week/{year}/{week}/{user}```
+```
+week/{year}/{week}/{user}
+```
 Gets a specific week by week number, e.g. week/2015/32/stefango
 
 Example Body:
@@ -47,15 +57,21 @@ Example Body:
 ### Projects
 Projects are added automatically if a week entry containing a new project is submitted.  You can query them via the API.
 
-```projects```
+```
+projects
+```
 
 or
 
-```projects?contains={some text}```
+```
+projects?contains={some text}
+```
 
 Example JSON Result
 
-```[
+```
+[
   "Animal Farm",
   "Coming Up For Air"
-]```
+]
+```
